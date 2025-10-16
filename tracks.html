@@ -102,128 +102,104 @@
         </div>
     </nav>
 
-    <!-- Tracks Section -->
-<section id="track" class="relative bg-gradient-to-b from-gray-900 via-blue-950 to-gray-900 py-20 overflow-hidden">
-
-  <!-- Floating Lights -->
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute bg-blue-400 opacity-20 rounded-full w-40 h-40 blur-3xl top-10 left-10 animate-pulse"></div>
-    <div class="absolute bg-purple-500 opacity-20 rounded-full w-60 h-60 blur-3xl bottom-10 right-20 animate-pulse delay-500"></div>
+    <section class="bg-gray-50 py-24" id="track">
+  <div class="text-center mb-16">
+    <h2 class="text-4xl font-extrabold text-gray-800 tracking-wide uppercase">
+      Tracks of the Conference
+    </h2>
+    <div class="mt-2 h-1 w-24 mx-auto bg-blue-600 rounded"></div>
   </div>
 
-  <div class="container mx-auto px-6 relative z-10">
-    <!-- Section Header -->
-    <div class="text-center mb-16">
-      <h1 class="text-5xl font-extrabold text-white drop-shadow-lg mb-6 animate-fadeIn">
-        🚀 Tracks of the Conference
-      </h1>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto animate-fadeIn delay-100">
-        Explore the exciting domains that shape the future of innovation and technology.
-      </p>
+  <div class="container mx-auto px-6 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- Track Box -->
+    <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-blue-700 mb-3">Track 1:</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Sustainable Manufacturing</li>
+          <li>Additive Manufacturing</li>
+          <li>CNC & Computer-Integrated Manufacturing</li>
+          <li>Cyber-Physical Systems</li>
+          <li>Micro/Nano Processing</li>
+          <li>AI & ML in Manufacturing</li>
+          <li>Surface Coating Technology</li>
+          <li>Smart Manufacturing</li>
+        </ul>
+      </div>
     </div>
 
-    <!-- Cards Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 justify-items-center">
-      
-      <!-- Track Card -->
-      <div class="bg-gray-800/60 backdrop-blur-md border border-blue-500 shadow-[0_0_25px_#3b82f6] hover:shadow-[0_0_35px_#60a5fa] transition-all duration-500 rounded-2xl p-6 w-80 transform hover:-translate-y-3 hover:scale-105 animate-slideUp">
-        <h2 class="text-2xl font-bold text-blue-400 mb-4 text-center">Track 1</h2>
-        <ul class="space-y-2 text-gray-200 text-sm">
-          <li>🛠️ Sustainable Manufacturing</li>
-          <li>🏭 Additive Manufacturing</li>
-          <li>🧠 AI & ML in Manufacturing</li>
-          <li>⚙️ CNC and Smart Systems</li>
-          <li>🔬 Micro/Nano Processing</li>
-          <li>🎯 Cyber-Physical Systems</li>
-          <li>✨ Surface Coating & Technology</li>
+    <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-blue-700 mb-3">Track 2:</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Machine Learning in Machining</li>
+          <li>Artificial Intelligence</li>
+          <li>Autonomous Vehicles</li>
+          <li>Deep Learning</li>
+          <li>Evolutionary Computing</li>
+          <li>Fuzzy Logic Systems</li>
+          <li>Neural Networks</li>
+          <li>Smart Energy Systems</li>
         </ul>
       </div>
+    </div>
 
-      <!-- Track 2 -->
-      <div class="bg-gray-800/60 backdrop-blur-md border border-purple-500 shadow-[0_0_25px_#a855f7] hover:shadow-[0_0_35px_#c084fc] transition-all duration-500 rounded-2xl p-6 w-80 transform hover:-translate-y-3 hover:scale-105 animate-slideUp delay-100">
-        <h2 class="text-2xl font-bold text-purple-400 mb-4 text-center">Track 2</h2>
-        <ul class="space-y-2 text-gray-200 text-sm">
-          <li>🤖 Artificial Intelligence</li>
-          <li>🚘 Autonomous Vehicles</li>
-          <li>🧩 Machine Learning</li>
-          <li>🧬 Neural Networks</li>
-          <li>💡 Smart Energy Systems</li>
-          <li>🔍 Fuzzy Logic & Evolutionary Computing</li>
+    <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-blue-700 mb-3">Track 3:</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Modeling & Simulation of Energy Systems</li>
+          <li>Renewable Energy Utilization</li>
+          <li>Robotics & Automation</li>
+          <li>Clean Power Systems</li>
+          <li>Sustainable Combustion Methods</li>
+          <li>AI in Energy Engineering</li>
         </ul>
       </div>
+    </div>
 
-      <!-- Track 3 -->
-      <div class="bg-gray-800/60 backdrop-blur-md border border-teal-500 shadow-[0_0_25px_#14b8a6] hover:shadow-[0_0_35px_#2dd4bf] transition-all duration-500 rounded-2xl p-6 w-80 transform hover:-translate-y-3 hover:scale-105 animate-slideUp delay-200">
-        <h2 class="text-2xl font-bold text-teal-400 mb-4 text-center">Track 3</h2>
-        <ul class="space-y-2 text-gray-200 text-sm">
-          <li>🔋 Renewable Energy Systems</li>
-          <li>🧠 AI in Energy Engineering</li>
-          <li>🤖 Robotics & Mechatronics</li>
-          <li>🔥 Sustainable Combustion</li>
-          <li>⚡ Clean Power Systems</li>
-          <li>🔭 Energy Modeling & Simulation</li>
+    <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-blue-700 mb-3">Track 4:</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Smart Materials</li>
+          <li>Composite Materials</li>
+          <li>Nanomaterials</li>
+          <li>Tribology</li>
+          <li>Surface Texturing</li>
+          <li>Advanced Material Engineering</li>
         </ul>
       </div>
+    </div>
 
-      <!-- Track 4 -->
-      <div class="bg-gray-800/60 backdrop-blur-md border border-pink-500 shadow-[0_0_25px_#ec4899] hover:shadow-[0_0_35px_#f472b6] transition-all duration-500 rounded-2xl p-6 w-80 transform hover:-translate-y-3 hover:scale-105 animate-slideUp delay-300">
-        <h2 class="text-2xl font-bold text-pink-400 mb-4 text-center">Track 4</h2>
-        <ul class="space-y-2 text-gray-200 text-sm">
-          <li>🧪 Smart Materials</li>
-          <li>🧱 Composites & Nanomaterials</li>
-          <li>🛢️ Tribology & Surface Engineering</li>
-          <li>💎 Surface Texturing</li>
-          <li>⚙️ Material Design and Testing</li>
+    <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-blue-700 mb-3">Track 5:</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Advanced Communication Systems</li>
+          <li>Information & Coding Theory</li>
+          <li>Wireless & Satellite Communication</li>
+          <li>Quantum Computing</li>
+          <li>Privacy in Communication</li>
+          <li>Smart Grid Systems</li>
         </ul>
       </div>
+    </div>
 
-      <!-- Track 5 -->
-      <div class="bg-gray-800/60 backdrop-blur-md border border-indigo-500 shadow-[0_0_25px_#6366f1] hover:shadow-[0_0_35px_#818cf8] transition-all duration-500 rounded-2xl p-6 w-80 transform hover:-translate-y-3 hover:scale-105 animate-slideUp delay-400">
-        <h2 class="text-2xl font-bold text-indigo-400 mb-4 text-center">Track 5</h2>
-        <ul class="space-y-2 text-gray-200 text-sm">
-          <li>📡 Advanced Communication Systems</li>
-          <li>🛰️ Satellite and Space Communication</li>
-          <li>🔐 Security and Privacy</li>
-          <li>🧮 Quantum Computing</li>
-          <li>⚡ Smart Grid Networks</li>
-          <li>📶 Wireless Communication</li>
+    <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-blue-700 mb-3">Track 6:</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>VLSI & IoT Modeling</li>
+          <li>Device Simulation</li>
+          <li>Signal & Image Processing</li>
+          <li>Biomedical Signal Processing</li>
+          <li>Instrumentation & Measurement Systems</li>
         </ul>
       </div>
-
-      <!-- Track 6 -->
-      <div class="bg-gray-800/60 backdrop-blur-md border border-cyan-500 shadow-[0_0_25px_#06b6d4] hover:shadow-[0_0_35px_#22d3ee] transition-all duration-500 rounded-2xl p-6 w-80 transform hover:-translate-y-3 hover:scale-105 animate-slideUp delay-500">
-        <h2 class="text-2xl font-bold text-cyan-400 mb-4 text-center">Track 6</h2>
-        <ul class="space-y-2 text-gray-200 text-sm">
-          <li>💻 VLSI & IoT Simulation</li>
-          <li>🧠 Biomedical Signal Processing</li>
-          <li>🎥 Image and Video Systems</li>
-          <li>🔍 Instrumentation & Measurement</li>
-          <li>📊 Adaptive Signal Processing</li>
-        </ul>
-      </div>
-
     </div>
   </div>
 </section>
-
-<!-- Custom Animations -->
-<style>
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-fadeIn {
-  animation: fadeIn 1.2s ease forwards;
-}
-
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-slideUp {
-  animation: slideUp 1.3s ease forwards;
-}
-</style>
 
 
     <footer class="text-gray-600 body-font bg-gray-900">
