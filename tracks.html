@@ -102,217 +102,146 @@
         </div>
     </nav>
 
-    <section class="bg-gray-50 py-24" id="track">
-  <div class="text-center mb-16">
-    <h2 class="text-4xl font-extrabold text-gray-800 tracking-wide uppercase">
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Tracks</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+    }
+    .track-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.4s ease;
+      box-shadow: 0 0 20px rgba(0, 150, 255, 0.1);
+    }
+    .track-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 30px rgba(0, 150, 255, 0.3);
+      border-color: rgba(0, 150, 255, 0.5);
+    }
+    .glow-text {
+      text-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
+    }
+    li::before {
+      content: "•";
+      color: #38bdf8;
+      margin-right: 6px;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center text-center">
+
+  <!-- Header -->
+  <section id="track" class="py-16">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-cyan-400 glow-text tracking-wide">
       Tracks of the Conference
-    </h2>
-    <div class="mt-2 h-1 w-24 mx-auto bg-blue-600 rounded"></div>
-  </div>
+    </h1>
+    <div class="mt-2 h-1 w-32 bg-cyan-400 mx-auto rounded-full"></div>
+  </section>
 
-  <div class="container mx-auto px-6 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-    <!-- Track Box -->
-    <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-      <div class="p-6">
-        <h3 class="text-2xl font-bold text-blue-700 mb-3">Track 1:</h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Sustainable Manufacturing</li>
-          <li>Additive Manufacturing</li>
-          <li>CNC & Computer-Integrated Manufacturing</li>
-          <li>Cyber-Physical Systems</li>
-          <li>Micro/Nano Processing</li>
-          <li>AI & ML in Manufacturing</li>
-          <li>Surface Coating Technology</li>
-          <li>Smart Manufacturing</li>
-        </ul>
-      </div>
+  <!-- Tracks Section -->
+  <main class="flex flex-wrap justify-center gap-10 px-6 pb-24">
+    
+    <!-- Track 1 -->
+    <div class="track-card rounded-2xl p-6 w-80">
+      <h2 class="text-xl font-bold text-cyan-300 mb-4">
+        Track 1: Advanced Materials for Environmental Remediation, Energy Conversion, and Sustainable Technologies
+      </h2>
+      <ul class="text-sm text-gray-300 text-left leading-relaxed">
+        <li>Synthesis and Characterization of Next-Generation Materials</li>
+        <li>Nanomaterials for Environmental Protection and Remediation</li>
+        <li>Smart and Functional Materials for Energy Applications</li>
+        <li>Advanced Energy Storage and Conversion Technologies</li>
+      </ul>
     </div>
 
-<<<<<<< HEAD
-                <div class=" absolute inset-4 flex justify-end">
-                    <div class="h-4 w-4 rounded-full bg-gray-900"></div>
-                </div>
-                <footer class="mb-10 flex justify-center">
-                    <button
-                        class="flex items-baseline rounded-full bg-blue-700 px-4 py-1.5 text-xl font-bold text-white">
-                        <span>Track 1: Advanced Materials for Environmental Remediation, Energy Conversion, and Sustainable Technologies </span>
-                    </button>
-                </footer>
-                <p>
-                    <li class="text-sm font-medium text-gray-800">Synthesis and Characterization of Next-Generation Materials</li>
-                    <li class="text-sm font-medium text-gray-800">Nanomaterials for Environmental Protection and Remediation</li>
-                    <li class="text-sm font-medium text-gray-800">Smart and Functional Materials for Energy Applications</li>
-                    <li class="text-sm font-medium text-gray-800">Advanced Energy Storage and Conversion Technologies</li>
-                    
-                </p>
-            </div>
-            <div
-                class="relative h-96 w-80 transform rounded-2xl  rotate-2 bg-gray-100 p-6 transition duration-300 hover:rotate-0">
-
-                <div class=" absolute inset-4 flex justify-end">
-                    <div class="h-4 w-4 rounded-full bg-gray-900"></div>
-                </div>
-                <footer class="mb-10 flex justify-center">
-                    <button
-                        class="flex items-baseline rounded-full bg-blue-700 px-4 py-1.5 text-xl font-bold text-white">
-                        <span>Track 2: Intelligent and Sustainable Manufacturing in Industry 4.0/5.0 </span>
-                    </button>
-                </footer>
-                <p>
-                    <li class="text-sm font-medium text-gray-800"> Advanced and Precision Manufacturing Technologies</li>
-                    <li class="text-sm font-medium text-gray-800"> Smart Factories and Cyber-Physical Production Systems</li>
-                    <li class="text-sm font-medium text-gray-800"> AI-, ML-, and Data-Driven Process Optimization</li>
-                    <li class="text-sm font-medium text-gray-800"> Digital Twins and Simulation-Based Manufacturing</li>
-                    <li class="text-sm font-medium text-gray-800"> Sustainable and Circular Manufacturing Approaches</li>
-                </p>
-            </div>
-            <div
-                class="relative h-96 w-80 transform rounded-2xl  rotate-2 bg-gray-100 p-6 transition duration-300 hover:rotate-0">
-
-                <div class=" absolute inset-4 flex justify-end">
-                    <div class="h-4 w-4 rounded-full bg-gray-900"></div>
-                </div>
-                <footer class="mb-10 flex justify-center">
-                    <button
-                        class="flex items-baseline rounded-full bg-blue-700 px-4 py-1.5 text-xl font-bold text-white">
-                        <span>Track 3: Materials for Extreme Functionalities and Next-Generation Applications </span>
-                    </button>
-                </footer>
-                <p>
-                    <li class="text-sm font-medium text-gray-800"> Nanomaterials, Metamaterials, and Quantum Systems</li>
-                    <li class="text-sm font-medium text-gray-800"> High-Performance Structural Alloys and Composites</li>
-                    <li class="text-sm font-medium text-gray-800"> Thermal and Electronic Functional Materials</li>
-                    <li class="text-sm font-medium text-gray-800"> Smart, Adaptive, and Self-Healing Materials</li>
-                    <li class="text-sm font-medium text-gray-800"> Functional and Bioengineered Materials </li>
-                </p>
-            </div>
-            <div
-                class="relative h-96 w-80 transform rounded-2xl  rotate-2 bg-gray-100 p-6 transition duration-600 hover:rotate-0">
-
-                <div class=" absolute inset-4 flex justify-end">
-                    <div class="h-4 w-4 rounded-full bg-gray-900"></div>
-                </div>
-                <footer class="mb-10 flex justify-center">
-                    <button
-                        class="flex items-baseline rounded-full bg-blue-700 px-4 py-1.5 text-xl font-bold text-white">
-                        <span>Track 4: Engineering Tribology and Surface Innovation </span>
-                    </button>
-                </footer>
-                <p>
-                    <li class="text-sm font-medium text-gray-800"> Advanced Surface Engineering and Coating Technologies</li>
-                    <li class="text-sm font-medium text-gray-800"> Lubrication Science and Adaptive Tribological Systems</li>
-                    <li class="text-sm font-medium text-gray-800"> Extreme-Environment and High-Temperature Tribology</li>
-                    <li class="text-sm font-medium text-gray-800"> Tribology of Additively Manufactured and Nanostructured Components</li>
-                </p>
-            </div>
-            <div
-                class="relative h-96 w-80 transform rounded-2xl  rotate-2 bg-gray-100 p-6 transition duration-300 hover:rotate-0">
-
-                <div class=" absolute inset-4 flex justify-end">
-                    <div class="h-4 w-4 rounded-full bg-gray-900"></div>
-                </div>
-                <footer class="mb-10 flex justify-center">
-                    <button
-                        class="flex items-baseline rounded-full bg-blue-700 px-4 py-1.5 text-xl font-bold text-white">
-                        <span>Track 5: Computational Modeling, Simulation, and Data-Driven Materials Design </span>
-                    </button>
-                </footer>
-                <p>
-                    <li class="text-sm font-medium text-gray-800">Multiscale and Multiphysics Modeling of Materials</li>
-                    <li class="text-sm font-medium text-gray-800">Computational Materials Science and Integrated Design</li>
-                    <li class="text-sm font-medium text-gray-800">Machine Learning and AI in Materials Discovery</li>
-                    <li class="text-sm font-medium text-gray-800">Process Simulation and Digital Materials Engineering</li>
-                </p>
-            </div>
-            <div
-                class="relative h-96 w-80 transform rounded-2xl  rotate-2 bg-gray-100 p-6 transition duration-300 hover:rotate-0">
-
-                <div class=" absolute inset-4 flex justify-end">
-                    <div class="h-4 w-4 rounded-full bg-gray-900"></div>
-                </div>
-                <footer class="mb-10 flex justify-center">
-                    <button
-                        class="flex items-baseline rounded-full bg-blue-700 px-4 py-1.5 text-xl font-bold text-white">
-                        
-                </p>
-            </div>
-
-        </div>
-    </main>
-=======
-    <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-      <div class="p-6">
-        <h3 class="text-2xl font-bold text-blue-700 mb-3">Track 2:</h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Machine Learning in Machining</li>
-          <li>Artificial Intelligence</li>
-          <li>Autonomous Vehicles</li>
-          <li>Deep Learning</li>
-          <li>Evolutionary Computing</li>
-          <li>Fuzzy Logic Systems</li>
-          <li>Neural Networks</li>
-          <li>Smart Energy Systems</li>
-        </ul>
-      </div>
+    <!-- Track 2 -->
+    <div class="track-card rounded-2xl p-6 w-80">
+      <h2 class="text-xl font-bold text-cyan-300 mb-4">
+        Track 2: Intelligent and Sustainable Manufacturing in Industry 4.0/5.0
+      </h2>
+      <ul class="text-sm text-gray-300 text-left leading-relaxed">
+        <li>Advanced and Precision Manufacturing Technologies</li>
+        <li>Smart Factories and Cyber-Physical Production Systems</li>
+        <li>AI-, ML-, and Data-Driven Process Optimization</li>
+        <li>Digital Twins and Simulation-Based Manufacturing</li>
+        <li>Sustainable and Circular Manufacturing Approaches</li>
+      </ul>
     </div>
 
-    <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-      <div class="p-6">
-        <h3 class="text-2xl font-bold text-blue-700 mb-3">Track 3:</h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Modeling & Simulation of Energy Systems</li>
-          <li>Renewable Energy Utilization</li>
-          <li>Robotics & Automation</li>
-          <li>Clean Power Systems</li>
-          <li>Sustainable Combustion Methods</li>
-          <li>AI in Energy Engineering</li>
-        </ul>
-      </div>
+    <!-- Track 3 -->
+    <div class="track-card rounded-2xl p-6 w-80">
+      <h2 class="text-xl font-bold text-cyan-300 mb-4">
+        Track 3: Materials for Extreme Functionalities and Next-Generation Applications
+      </h2>
+      <ul class="text-sm text-gray-300 text-left leading-relaxed">
+        <li>Nanomaterials, Metamaterials, and Quantum Systems</li>
+        <li>High-Performance Structural Alloys and Composites</li>
+        <li>Thermal and Electronic Functional Materials</li>
+        <li>Smart, Adaptive, and Self-Healing Materials</li>
+        <li>Functional and Bioengineered Materials</li>
+      </ul>
     </div>
 
-    <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-      <div class="p-6">
-        <h3 class="text-2xl font-bold text-blue-700 mb-3">Track 4:</h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Smart Materials</li>
-          <li>Composite Materials</li>
-          <li>Nanomaterials</li>
-          <li>Tribology</li>
-          <li>Surface Texturing</li>
-          <li>Advanced Material Engineering</li>
-        </ul>
-      </div>
+    <!-- Track 4 -->
+    <div class="track-card rounded-2xl p-6 w-80">
+      <h2 class="text-xl font-bold text-cyan-300 mb-4">
+        Track 4: Engineering Tribology and Surface Innovation
+      </h2>
+      <ul class="text-sm text-gray-300 text-left leading-relaxed">
+        <li>Advanced Surface Engineering and Coating Technologies</li>
+        <li>Lubrication Science and Adaptive Tribological Systems</li>
+        <li>Extreme-Environment and High-Temperature Tribology</li>
+        <li>Tribology of Additively Manufactured and Nanostructured Components</li>
+      </ul>
     </div>
 
-    <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-      <div class="p-6">
-        <h3 class="text-2xl font-bold text-blue-700 mb-3">Track 5:</h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Advanced Communication Systems</li>
-          <li>Information & Coding Theory</li>
-          <li>Wireless & Satellite Communication</li>
-          <li>Quantum Computing</li>
-          <li>Privacy in Communication</li>
-          <li>Smart Grid Systems</li>
-        </ul>
-      </div>
+    <!-- Track 5 -->
+    <div class="track-card rounded-2xl p-6 w-80">
+      <h2 class="text-xl font-bold text-cyan-300 mb-4">
+        Track 5: Computational Modeling, Simulation, and Data-Driven Materials Design
+      </h2>
+      <ul class="text-sm text-gray-300 text-left leading-relaxed">
+        <li>Multiscale and Multiphysics Modeling of Materials</li>
+        <li>Computational Materials Science and Integrated Design</li>
+        <li>Machine Learning and AI in Materials Discovery</li>
+        <li>Process Simulation and Digital Materials Engineering</li>
+      </ul>
     </div>
 
-    <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-      <div class="p-6">
-        <h3 class="text-2xl font-bold text-blue-700 mb-3">Track 6:</h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>VLSI & IoT Modeling</li>
-          <li>Device Simulation</li>
-          <li>Signal & Image Processing</li>
-          <li>Biomedical Signal Processing</li>
-          <li>Instrumentation & Measurement Systems</li>
-        </ul>
-      </div>
+    <!-- Track 6 -->
+    <div class="track-card rounded-2xl p-6 w-80">
+      <h2 class="text-xl font-bold text-cyan-300 mb-4">
+        Track 6: Modeling and Simulation in Electronics and Signal Processing
+      </h2>
+      <ul class="text-sm text-gray-300 text-left leading-relaxed">
+        <li>Device/VLSI Modeling and Simulation</li>
+        <li>IoT Modeling and Simulation</li>
+        <li>VLSI Modeling and Simulation</li>
+        <li>Electronics Device Modeling and Simulations</li>
+        <li>Adaptive Signal Processing</li>
+        <li>Biomedical Signal Processing</li>
+        <li>Image, Multimedia, and Video Signal Processing</li>
+        <li>Instrumentation and Measurement Systems</li>
+      </ul>
     </div>
-  </div>
-</section>
->>>>>>> 0af5bb3b40a71df7d50ed8cc42ac16820541189d
+  </main>
+
+  <footer class="pb-10 text-gray-500 text-sm">
+    © 2026 RAMEA International Conference | Designed with 💡 Science & Simplicity
+  </footer>
+
+</body>
+</html>
 
 
     <footer class="text-gray-600 body-font bg-gray-900">
