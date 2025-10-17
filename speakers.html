@@ -2,21 +2,49 @@
 <html lang="en">
 
 <head>
-<link rel="icon" type="image/png" href="./logo.png">
-
+    <link rel="icon" type="image/png" href="./logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <title>RAMEA 2026 - NERIST</title>
+    <style>
+        .speaker-card {
+            transition: all 0.3s ease;
+        }
+        .speaker-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .speaker-img {
+            transition: all 0.3s ease;
+        }
+        .speaker-card:hover .speaker-img {
+            transform: scale(1.05);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            border-radius: 2px;
+        }
+    </style>
 </head>
 
-<body>
-<nav class="absolute top-0 w-full bg-white border-gray-200 border-2 dark:bg-gray-900 z-50">
+<body class="bg-gray-50">
+    <nav class="absolute top-0 w-full bg-white border-gray-200 border-2 dark:bg-gray-900 z-50">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                        <a href="./index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-
+            <a href="./index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="logo.png" alt="Logo" class="h-8 w-auto">
                 <span class="self-center text-2xl font-bold whitespace-nowrap text-blue-700 dark:text-white">RAMEA 2026</span>
             </a>
@@ -24,146 +52,198 @@
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M1 1h15M1 7h15M1 13h15" />
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                 </svg>
             </button>
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                <ul
-                    class="font-medium flex flex-col md:p-0 mt-4 bg-gray-50 md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                    <li>
-                        <a href="index.html"
-                            class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tracks.html"
-                            class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">
-                            Tracks
-                        </a>
-                    </li>
+                <ul class="font-medium flex flex-col md:p-0 mt-4 bg-gray-50 md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li><a href="index.html" class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">Home</a></li>
+                    <li><a href="tracks.html" class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">Tracks</a></li>
                     <li class="relative">
-                        <a href="./cfp.html"
-                            class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">
-                            Call for Papers
-                        </a>
-                        <ul class="absolute hidden bg-white text-gray-900 pt-1 w-32 border border-gray-200 z-10"
-                            id="author-dropdown">
-                            <li><a href="./authorguideline.html" class="block px-4 py-2 hover:bg-gray-200">Authors
-                                    Guidelines</a></li>
+                        <a href="./cfp.html" class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">Call for Papers</a>
+                        <ul class="absolute hidden bg-white text-gray-900 pt-1 w-32 border border-gray-200 z-10" id="author-dropdown">
+                            <li><a href="./authorguideline.html" class="block px-4 py-2 hover:bg-gray-200">Authors Guidelines</a></li>
                         </ul>
                     </li>
-                    <style>
-                        li.relative:hover #author-dropdown {
-                            display: block;
-                        }
-                    </style>
-
-                    <li>
-                        <a href="organising.html"
-                            class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">
-                            Organizing Committee
-                        </a>
-                    </li>
-                    <li>
-                        <a href="awards.html"
-                            class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md ">Awards</a>
-                    </li>
-                    <li>
-                        <a href="speakers.html"
-                            class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">
-                            Speakers
-                        </a>
-                    </li>
-                    <li>
-                        <a href="objective.html"
-                            class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">
-                            Objectives
-                        </a>
-                    </li>
-                    <li>
-                        <a href="register.html"
-                            class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">
-                            Register
-                        </a>
-                    </li>
-                    <li>
-                        <a href="contact.html"
-                            class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">
-                            Contacts
-                        </a>
-                    </li>
+                    <li><a href="organising.html" class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">Organizing Committee</a></li>
+                    <li><a href="awards.html" class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">Awards</a></li>
+                    <li><a href="speakers.html" class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">Speakers</a></li>
+                    <li><a href="register.html" class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">Register</a></li>
+                    <li><a href="contact.html" class="text-md font-bold block text-gray-900 md:border-0 dark:text-white hover:text-white hover:bg-blue-700 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent px-2 py-1 rounded-md">Contacts</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-<!-- Fullscreen Coming Soon Section -->
-<section class="relative flex flex-col justify-center items-center h-screen overflow-hidden bg-gradient-to-br from-blue-700 via-indigo-700 to-purple-800 text-white">
-  
-  <!-- Animated Gradient Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 opacity-20 blur-3xl animate-gradientMove"></div>
-  
-  <!-- Floating Particles -->
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute bg-white opacity-30 rounded-full w-2 h-2 animate-float delay-75"></div>
-    <div class="absolute bg-white opacity-40 rounded-full w-3 h-3 animate-float delay-150"></div>
-    <div class="absolute bg-white opacity-20 rounded-full w-1 h-1 animate-float delay-300"></div>
-    <div class="absolute bg-white opacity-30 rounded-full w-2 h-2 animate-float delay-500"></div>
-  </div>
 
-  <!-- Main Text -->
-  <div class="relative z-10 text-center">
-    <h1 class="text-6xl md:text-7xl font-extrabold tracking-widest animate-pulse drop-shadow-lg">
-      🚧 To Be Updated Soon 🚧
-    </h1>
-    <p class="mt-6 text-lg md:text-2xl text-gray-200 font-medium animate-fadeIn">
-      Exciting updates are on the way! Stay tuned for announcements and new details.
-    </p>
-    <div class="mt-10">
-      <a href="index.html" 
-         class="bg-yellow-400 text-blue-900 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-300 hover:scale-105 transition-transform duration-300">
-         Back to Home
-      </a>
+    <style>
+        li.relative:hover #author-dropdown {
+            display: block;
+        }
+    </style>
+
+    <!-- Hero Section -->
+    <div class="pt-32 pb-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 section-title">Distinguished Speakers</h1>
+            <p class="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">
+                Join us for inspiring keynotes from world-renowned experts in their respective fields
+            </p>
+        </div>
     </div>
-  </div>
 
-</section>
+    <!-- Keynote Speakers Section -->
+    <div class="max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-3 section-title">Keynote Speakers</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Leading voices shaping the future of research and innovation</p>
+        </div>
 
-<!-- Custom Animations -->
-<style>
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-.animate-gradientMove {
-  background-size: 200% 200%;
-  animation: gradientMove 10s ease infinite;
-}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <!-- Speaker 1 -->
+            <div class="speaker-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="speaker1.jpg" alt="Prof. Mahdi Bodaghi" class="speaker-img w-full h-80 object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Prof. Mahdi Bodaghi</h3>
+                    <p class="text-blue-600 font-semibold mb-3">Keynote Speaker</p>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        Professor of Advanced Manufacturing and Materials Science
+                    </p>
+                    <div class="border-t pt-4">
+                        <p class="text-sm text-gray-500 mb-2">
+                            <span class="font-semibold text-gray-700">Affiliation:</span> University of Technology
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            <span class="font-semibold text-gray-700">Expertise:</span> 4D Printing, Smart Materials, Metamaterials
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-@keyframes float {
-  0% { transform: translateY(0) translateX(0); opacity: 0.5; }
-  50% { transform: translateY(-30px) translateX(20px); opacity: 1; }
-  100% { transform: translateY(0) translateX(0); opacity: 0.5; }
-}
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-  top: calc(50% - 2rem);
-  left: calc(50% - 2rem);
-}
+            <!-- Speaker 2 -->
+            <div class="speaker-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="speaker2.jpg" alt="Prof. Jane Doe" class="speaker-img w-full h-80 object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Prof. Jane Doe</h3>
+                    <p class="text-blue-600 font-semibold mb-3">Keynote Speaker</p>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        Distinguished Professor of Engineering Sciences
+                    </p>
+                    <div class="border-t pt-4">
+                        <p class="text-sm text-gray-500 mb-2">
+                            <span class="font-semibold text-gray-700">Affiliation:</span> International Research Institute
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            <span class="font-semibold text-gray-700">Expertise:</span> Sustainable Engineering, Innovation
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-fadeIn {
-  animation: fadeIn 2s ease-in-out forwards;
-}
-</style>
+            <!-- Speaker 3 -->
+            <div class="speaker-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="speaker3.jpg" alt="Dr. John Smith" class="speaker-img w-full h-80 object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Dr. John Smith</h3>
+                    <p class="text-blue-600 font-semibold mb-3">Keynote Speaker</p>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        Senior Research Scientist and Department Head
+                    </p>
+                    <div class="border-t pt-4">
+                        <p class="text-sm text-gray-500 mb-2">
+                            <span class="font-semibold text-gray-700">Affiliation:</span> Global Research Center
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            <span class="font-semibold text-gray-700">Expertise:</span> Applied Sciences, Technology Transfer
+                        </p>
+                    </div>
+                </div>
+            </div>
+                       <div class="speaker-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="speaker2.jpg" alt="Prof. Jane Doe" class="speaker-img w-full h-80 object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Prof. Jane Doe</h3>
+                    <p class="text-blue-600 font-semibold mb-3">Keynote Speaker</p>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        Distinguished Professor of Engineering Sciences
+                    </p>
+                    <div class="border-t pt-4">
+                        <p class="text-sm text-gray-500 mb-2">
+                            <span class="font-semibold text-gray-700">Affiliation:</span> International Research Institute
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            <span class="font-semibold text-gray-700">Expertise:</span> Sustainable Engineering, Innovation
+                        </p>
+                    </div>
+                </div>
+            </div>
+                       <div class="speaker-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="speaker2.jpg" alt="Prof. Jane Doe" class="speaker-img w-full h-80 object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Prof. Jane Doe</h3>
+                    <p class="text-blue-600 font-semibold mb-3">Keynote Speaker</p>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        Distinguished Professor of Engineering Sciences
+                    </p>
+                    <div class="border-t pt-4">
+                        <p class="text-sm text-gray-500 mb-2">
+                            <span class="font-semibold text-gray-700">Affiliation:</span> International Research Institute
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            <span class="font-semibold text-gray-700">Expertise:</span> Sustainable Engineering, Innovation
+                        </p>
+                    </div>
+                </div>
+            </div>
 
+                       <div class="speaker-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="overflow-hidden">
+                    <img src="speaker2.jpg" alt="Prof. Jane Doe" class="speaker-img w-full h-80 object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Prof. Jane Doe</h3>
+                    <p class="text-blue-600 font-semibold mb-3">Keynote Speaker</p>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        Distinguished Professor of Engineering Sciences
+                    </p>
+                    <div class="border-t pt-4">
+                        <p class="text-sm text-gray-500 mb-2">
+                            <span class="font-semibold text-gray-700">Affiliation:</span> International Research Institute
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            <span class="font-semibold text-gray-700">Expertise:</span> Sustainable Engineering, Innovation
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Call to Action -->
+        <div class="bg-blue-50 rounded-2xl p-8 text-center border-2 border-blue-100">
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Don't Miss These Insights</h3>
+            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                Register now to attend exclusive keynote sessions and interact with leading experts in the field
+            </p>
+            <a href="register.html" class="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg">
+                Register for RAMEA 2026
+            </a>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
-
 </html>
